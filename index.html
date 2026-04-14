@@ -97,17 +97,30 @@
       </section>
 
       <section>
-        <h3>2. Особистий простір та Сповіщення</h3>
+        <h3>2. Налаштування сповіщень</h3>
         <p class="small-text">Зробіть так, щоб Asana допомагала, а не спамила.</p>
         <ul class="small-text">
           <li>Перейдіть у <span class="highlight">Settings -> Notifications</span>.</li>
-          <li><strong>Вимкніть сповіщення на Email!</strong> Перевіряйте вкладку "Inbox" у самій Asana.</li>
-          <li>Налаштуйте вкладку <strong>My Tasks</strong>: використовуйте розділи "Recently Assigned", "Today", "Upcoming", щоб бачити тільки те, що важливо сьогодні.</li>
+          <li><strong>Вимкніть сповіщення на Email!</strong> Ми перевіряємо робочі оновлення виключно у вкладці "Inbox" в самій Asana.</li>
         </ul>
       </section>
 
       <section>
-        <h3>3. Центр комунікації та знань</h3>
+        <h3>3. Організація власного часу (My Tasks)</h3>
+        <div class="grid">
+          <div class="small-text" style="text-align: left;">
+            <p><strong>Плануйте свій день:</strong> Ви можете створювати тут власні особисті задачі для планування робочого часу.</p>
+            <p><strong>Ваші власні правила:</strong> Налаштуйте простір під себе. Створюйте зручні розділи, наприклад: <em>"В роботі"</em>, <em>"Не розпочаті"</em> чи <em>"Виконані"</em>.</p>
+            <p><strong>Зручний формат:</strong> Як і в проєктах, для ваших задач доступні різні вигляди: <em>List, Board, Calendar</em> та особистий <em>Dashboard</em>.</p>
+          </div>
+          <div>
+            <img src="My_tasks.jpg" alt="My Tasks" class="screenshot">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>4. Центр комунікації та знань</h3>
         <div class="small-text" style="text-align: left; margin-bottom: 20px;">
           <p><strong>💬 Messenger Проєкту:</strong> Розділ "Messages" — це місце для стратегічних обговорень та оголошень для всієї команди.</p>
           <p><strong>📎 Файли:</strong> Усі документи, ТЗ та візуали прикріплюються до задач. У вкладці "Files" зберігається повний архів. Більше не треба шукати матеріали в чатах.</p>
@@ -119,7 +132,7 @@
       </section>
 
       <section>
-        <h3>4. Обирайте свій стиль роботи</h3>
+        <h3>5. Обирайте свій стиль роботи</h3>
         <ul class="small-text">
             <li><strong>List (Список):</strong> Класика для чек-лістів.</li>
             <li><strong>Board (Канбан):</strong> Для візуалізації етапів.</li>
@@ -133,7 +146,7 @@
       </section>
 
       <section>
-        <h3>5. Залежності (Timeline)</h3>
+        <h3>6. Залежності (Timeline)</h3>
         <p class="small-text">Щоб <strong>Настя</strong> знала, коли <strong>Саша</strong> закінчить дизайн, і можна було почати наступний етап.</p>
         <ul class="small-text">
           <li>Asana автоматично сповістить наступного виконавця, коли попередня задача готова.</li>
@@ -143,7 +156,7 @@
       </section>
 
       <section>
-        <h3>6. Аналітика та Дашборди</h3>
+        <h3>7. Аналітика та Дашборди</h3>
         <div class="grid">
           <div>
             <img src="Dashboard.jpg" alt="Dashboard" class="screenshot">
@@ -187,31 +200,24 @@
       const lightbox = document.getElementById('lightbox');
       const images = document.querySelectorAll('.reveal img');
 
-      // Додаємо подію кліку на кожну картинку в презентації
       images.forEach(img => {
         img.addEventListener('click', (e) => {
-          // Зупиняємо стандартну поведінку Reveal.js при кліку
           e.stopPropagation(); 
           
-          // Створюємо копію картинки для лайтбоксу
           const imgClone = document.createElement('img');
           imgClone.src = img.src;
           
-          // Очищаємо попередню картинку і додаємо нову
           lightbox.innerHTML = '';
           lightbox.appendChild(imgClone);
           
-          // Показуємо лайтбокс
           lightbox.classList.add('active');
         });
       });
 
-      // Закриття лайтбоксу при кліку на нього
       lightbox.addEventListener('click', () => {
         lightbox.classList.remove('active');
       });
       
-      // Закриття лайтбоксу клавішею Escape
       document.addEventListener('keydown', (e) => {
         if (e.key === "Escape" && lightbox.classList.contains('active')) {
           lightbox.classList.remove('active');
