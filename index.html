@@ -11,17 +11,28 @@
     .reveal h2, .reveal h3 { color: #151b26; text-transform: none; font-weight: 700; }
     .reveal p, .reveal li { color: #40444d; }
     .highlight { color: #f06a6a; font-weight: bold; }
-    .img-placeholder { 
-      background: #f0f2f5; 
-      border: 2px dashed #cfd3d9; 
-      padding: 40px; 
-      margin: 20px 0; 
-      font-size: 0.5em; 
-      color: #8d949e;
-      border-radius: 8px;
-    }
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
     .small-text { font-size: 0.6em !important; line-height: 1.2; }
+    
+    /* Стилі для скриншотів */
+    .screenshot {
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-height: 400px;
+      object-fit: contain;
+    }
+    .multi-screenshot {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .multi-screenshot img {
+      max-height: 250px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
   </style>
 </head>
 <body>
@@ -44,69 +55,81 @@
       </section>
 
       <section>
-        <h3>Центр комунікації та знань</h3>
-        <div class="grid">
-          <div class="small-text" style="text-align: left;">
-            <p><strong>💬 Messenger Проєкту:</strong> У кожному проєкті є розділ "Messages". Це місце для стратегічних обговорень, дедлайнів та оголошень для всієї команди проєкту.</p>
-            <p><strong>📎 Файли:</strong> Забудьте про пошук у Telegram. Всі документи, ТЗ та візуали прикріплюються до конкретних задач. У вкладці "Files" проєкту ви знайдете повний архів усього, що надсилалося.</p>
-          </div>
-          <div class="img-placeholder">
-            [Тут вставте скриншот вкладки Messages або Files з вашої Asana]
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>Обирайте свій стиль роботи</h3>
-        <div class="grid">
-            <div class="small-text">
-                <p><strong>1. List (Список):</strong> Класика для чек-лістів.</p>
-                <p><strong>2. Board (Канбан):</strong> Для візуалізації етапів (To Do, In Progress, Done).</p>
-                <p><strong>3. Calendar:</strong> Щоб бачити навантаження по днях.</p>
-            </div>
-            <div class="img-placeholder">
-                [Скриншот перемикача List/Board/Calendar]
-            </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>Залежності (Dependencies)</h3>
-        <p class="small-text">Щоб <strong>Настя</strong> знала, коли <strong>Ігор</strong> завершить дизайн, і вона зможе почати верстку.</p>
+        <h3>1. Реєстрація: Перші кроки</h3>
         <ul>
-          <li class="small-text">Asana автоматично сповістить наступного виконавця, коли попередня задача готова.</li>
-          <li class="small-text">Ви бачите блокуючі задачі, що дозволяє уникнути затримок.</li>
+          <li>Шукайте лист-запрошення від Asana на корпоративній пошті <strong>(тій, що закінчується на @beavercraft.team)</strong>.</li>
+          <li>Перейдіть за посиланням, введіть ім'я та встановіть пароль.</li>
+          <li><strong>Важливо:</strong> Заповніть свій профіль — додайте фото та посаду, щоб колегам було легше вас знайти.</li>
         </ul>
-        <div class="img-placeholder" style="padding: 20px;">
-            [Тут скриншот "Task is blocking" або Timeline зв'язків]
+      </section>
+
+      <section>
+        <h3>2. Особистий простір та Сповіщення</h3>
+        <p class="small-text">Зробіть так, щоб Asana допомагала, а не спамила.</p>
+        <ul class="small-text">
+          <li>Перейдіть у <span class="highlight">Settings -> Notifications</span>.</li>
+          <li><strong>Вимкніть сповіщення на Email!</strong> Перевіряйте вкладку "Inbox" у самій Asana.</li>
+          <li>Налаштуйте вкладку <strong>My Tasks</strong>: використовуйте розділи "Recently Assigned", "Today", "Upcoming", щоб бачити тільки те, що важливо сьогодні.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>3. Центр комунікації та знань</h3>
+        <div class="small-text" style="text-align: left; margin-bottom: 20px;">
+          <p><strong>💬 Messenger Проєкту:</strong> Розділ "Messages" — це місце для стратегічних обговорень та оголошень для всієї команди.</p>
+          <p><strong>📎 Файли:</strong> Усі документи, ТЗ та візуали прикріплюються до задач. У вкладці "Files" зберігається повний архів. Більше не треба шукати матеріали в чатах.</p>
+        </div>
+        <div class="multi-screenshot">
+          <img src="Messages.jpg" alt="Messages">
+          <img src="Files.jpg" alt="Files">
         </div>
       </section>
 
       <section>
-        <h3>Аналітика та Дашборди</h3>
+        <h3>4. Обирайте свій стиль роботи</h3>
+        <ul class="small-text">
+            <li><strong>List (Список):</strong> Класика для чек-лістів.</li>
+            <li><strong>Board (Канбан):</strong> Для візуалізації етапів.</li>
+            <li><strong>Calendar:</strong> Щоб бачити навантаження команди по днях.</li>
+        </ul>
+        <div class="multi-screenshot" style="margin-top: 15px;">
+            <img src="List.jpg" alt="List View" style="max-height: 200px;">
+            <img src="Board.jpg" alt="Board View" style="max-height: 200px;">
+            <img src="Calendar.jpg" alt="Calendar View" style="max-height: 200px;">
+        </div>
+      </section>
+
+      <section>
+        <h3>5. Залежності (Timeline)</h3>
+        <p class="small-text">Щоб <strong>Настя</strong> знала, коли <strong>Саша</strong> закінчить дизайн, і можна було почати наступний етап.</p>
+        <ul class="small-text">
+          <li>Asana автоматично сповістить наступного виконавця, коли попередня задача готова.</li>
+          <li>Блокуючі задачі видно одразу, що дозволяє уникнути затримок.</li>
+        </ul>
+        <img src="Timeline.jpg" alt="Timeline" class="screenshot" style="margin-top: 15px;">
+      </section>
+
+      <section>
+        <h3>6. Аналітика та Дашборди</h3>
         <div class="grid">
-          <div class="img-placeholder">
-            [Тут скриншот Dashboard з графіками]
+          <div>
+            <img src="Dashboard.jpg" alt="Dashboard" class="screenshot">
           </div>
           <div class="small-text" style="text-align: left;">
-            <p><strong>Бачити все:</strong> Скільки задач у роботі? Хто перевантажений? Скільки дедлайнів пропущено?</p>
-            <p>Керівники відділів бачать реальну картину без потреби писати кожному в особисті: "Ну що там?".</p>
+            <p><strong>Бачити все як на долоні:</strong> На Дашборді миттєво видно кількість задач по етапах на проєкті.</p>
+            <ul>
+              <li>Які задачі вже готові <em>(Completed)</em>.</li>
+              <li>Де ще багато задач у роботі <em>(Upcoming)</em>.</li>
+              <li>Які етапи навіть не розпочаті <em>(Unscheduled)</em>.</li>
+            </ul>
+            <p>Керівники бачать реальну картину автоматично. Жодних мікроменеджерських питань "На якому ми етапі?".</p>
           </div>
         </div>
-      </section>
-
-      <section>
-        <h3>Ваш особистий фокус</h3>
-        <p class="small-text">Налаштуйте вкладку <strong>My Tasks</strong> для себе:</p>
-        <ul class="small-text">
-          <li>Використовуйте розділи "Recently Assigned", "Today", "Upcoming".</li>
-          <li>Прибирайте зайвий шум, щоб бачити тільки те, що важливо сьогодні.</li>
-        </ul>
       </section>
 
       <section>
         <h2>Починаємо?</h2>
-        <p>Реєструємось, ставимо перші задачі @Andriy або @Sasha та тестуємо зв'язки!</p>
+        <p>Реєструємось, налаштовуємо My Tasks та ставимо перші задачі (тегайте @Andriy або @Sasha, якщо потрібна допомога).</p>
         <p class="highlight">Успіхів нам усім!</p>
       </section>
 
